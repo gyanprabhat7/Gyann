@@ -1,0 +1,65 @@
+---
+import ContactForm from '../../components/forms/ContactForm.astro';
+import Layout from '../../layouts/Page.astro';
+import { Container } from '@littlesticks/odyssey-theme-components';
+
+const seo = {
+	title: 'Contact | Gyann',
+	description: 'Contact Page',
+};
+---
+
+<Layout seo={seo}>
+	<Container>
+		<section class="contact-hero__section">
+			<div class="contact-hero__text-section">
+				<h1>Contact Me</h1>
+				<p>
+					You can leave me a message or reach out to me via provided channels. Be patient, while expecting a response back.
+				</p>
+				<div>
+					<p>
+						<!-- <em><a href="tel:+6353452297">(800) 867-5309</a></em>--> • <em
+							><a href="mailto:gyan@epiction.co">gyan@epiction.co</a
+							></em
+						><em>
+							<br> • For any product or service related queires:<a href="mailto:support@epiction.co"> support@epiction.co </a
+						></em
+					> 
+					</p>
+				</div>
+			</div>
+			<div class="col-2__container">
+				<ContactForm />
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<style>
+	.contact-hero__section {
+		margin: var(--section-margin) auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		min-height: calc(90vh - var(--navbar-height));
+		gap: 3rem;
+	}
+	.contact-hero__text-section {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+	.col-2__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	@media (max-width: 768px) {
+		.contact-hero__section {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

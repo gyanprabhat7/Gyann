@@ -1,0 +1,110 @@
+---
+import {Icon} from 'astro-icon'
+import {
+  AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+  StickyTextImageSection,
+  CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+import LogoSlider from '../components/LogoSlider.astro';
+const seo = {
+	title: 'Gyann | Student & Techpreneur',
+	description: 'Gyan Prabhat (founder Epiction Interactive) personal website.',
+};
+---
+
+<AnnouncementBar text="Read My Latest Blog Post" href="https://gyan.epiction.co/blog" slot="announcement-bar"/>
+<Layout seo={seo} >
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Gyan Prabhat</h1>
+			<p>Student & Techpreneur | Hobyyist film-maker | Tech nerd <br> Proud founder of <a href="https://epiction.co/" target="_blank">Epiction Interactive</a></p>
+		</div>
+		<div slot="btns-container">
+			<Button href="mailto:gyan@epiction.co" customIcon
+				>Book a chat <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right"/>
+        </Fragment></Button
+			>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/gyan.png"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+
+	<LogoSlider />
+
+
+	<ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Mangatize.shop</h2>
+			<p>
+				Mangatize is an online merchandise store. We are committed to providing our customers with a one-stop-shop for all their Anime needs, and strive to deliver the best customer experience possible.
+			</p>
+		</div>
+		<Button href="https://epiction.co" target="_blank" slot="column-1-cta">Learn More</Button>
+		
+		<div slot="column-2-body">
+			<h2>Epiction Co</h2>
+			<p>
+				Epiction Interactive is a premier software startup owned by Gyann Co creating innovative and engaging games for players of all ages. Offering a wide variety of gaming experiences.
+			</p>
+		</div>
+		<Button href="https://goto.mangatize.shop/" slot="column-2-cta" outlined target="_blank" >Learn More</Button>
+		<div slot="column-3-body">
+			<h2>Coders Potion</h2>
+			<p>
+				'Coders Potion' the ultimate coffee stop for techies and code wizards. We might not be brewing in a lab, but we're definitely brewing up some awesome blends that pair perfectly with lines of code.
+			</p>
+		</div>
+		<Button href="https://coderspotion.company.site" target="_blank" slot="column-3-cta">Learn More</Button>
+	</ThreeColumnTextSection>
+
+	<YouTubeEmbedSection url="https://www.youtube.com/watch?v=9OYVsGsolIc" rounded />
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      <h2>Remarkable Work and Collaborations</h2>
+      <h3>Undead FPS</h3>
+      <p>
+        A wave based first person shooter zombie game developed by Aventum studio (now Epiction). The game has 100 waves each time the number of zombies multiply by four making it harder and harder to win this game.
+      </p>
+      <h3>LazyLoad.JS</h3>
+        <p>
+			Lazy Load JS is a lightweight JavaScript library designed to enhance web page performance by implementing lazy loading for images. Images are loaded only when they are about to become visible in the user's viewport, reducing initial page load times and saving bandwidth.
+      </p>
+       <h3>Reality Shift Engine (Roop)</h3>
+        <p>
+			A deepfake AI program based on Roop (an discontinued open-source ai project). Program helps you to create double images and videos by utilizing deepfake algorithms.
+      </p> 
+    </div>
+     <picture slot="image-container">
+      <img
+        src="/assets/images/landing-1/gyann.png"
+        alt="Astro Odyssey"
+        loading="lazy"
+      />
+    </picture>
+  </StickyTextImageSection>
+
+  <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+    <h6>Sponsored</h6>
+	<h2>Reach new heights with Go Digital</h2>
+    <p>It only takes a couple clicks to take your business online.</p>
+    <Button href="https://godigital.epiction.co" customIcon>Explore GoDigital <Fragment slot="icon">
+      <Icon name="ic:baseline-chevron-right"/>
+    </Fragment></Button>
+  </CtaCardSection>
+
+</Layout>
+

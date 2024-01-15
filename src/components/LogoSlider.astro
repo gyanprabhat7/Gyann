@@ -1,0 +1,103 @@
+<astrodoc>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Coding with Robby</title>
+      <link rel="stylesheet" href="./style.css" />
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+  
+        body {
+          background: #f2f2f2;
+        }
+  
+        @keyframes slide {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+  
+        .logos {
+          overflow: hidden;
+          padding: 60px 0;
+          background: white;
+          position: relative;
+        }
+  
+        .logos:before,
+        .logos:after {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          content: "";
+          z-index: 2;
+        }
+  
+        .logos:hover .logos-slide {
+          animation-play-state: running;
+        }
+  
+        .logos-slide {
+          display: flex;
+          animation: 60s slide infinite linear;
+        }
+  
+        .logos-slide img {
+          height: 100px;
+          margin: 0 20px;
+        }
+  
+        .logos h2 {
+          font-size: 1.6em;
+          color: #333;
+          margin-bottom: 60px;
+          text-align: center;
+        }
+  
+        @media (max-width: 600px) {
+          /* Adjust styles for mobile devices */
+          .logos-slide img {
+            height: 50px;
+            margin: 0 10px;
+          }
+          .logos-slide {
+          display: flex;
+          animation: 20s slide infinite linear;
+        }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="logos">
+        <h2>Recognitions</h2>
+        <div class="logos-slide">
+          <img loading="lazy" src="/assets/images/logos/codeday.png" alt="CodeDay" />
+          <img loading="lazy" src="/assets/images/logos/NeoDocto.png" alt="NeoDocto" />
+          <img loading="lazy" src="/assets/images/logos/harvardx.png" alt="HarvardX" />
+          <img loading="lazy" src="/assets/images/logos/googledeveloper.png" alt="Gooder Developer Launchpad" />
+          <img loading="lazy" src="/assets/images/logos/programminghub.png" alt="ProgrammingHub" />
+          <img loading="lazy" src="/assets/images/logos/hostingraja.png" alt="Hosting Raja" />
+          <img loading="lazy" src="/assets/images/logos/inamigos.png" alt="InAmigosFoundation" />
+          
+          <!-- Duplicate logos for infinite loop -->
+          <img loading="lazy" src="/assets/images/logos/codeday.png" alt="CodeDay" />
+          <img loading="lazy" src="/assets/images/logos/NeoDocto.png" alt="NeoDocto" />
+          <img loading="lazy" src="/assets/images/logos/harvardx.png" alt="HarvardX" />
+          <img loading="lazy" src="/assets/images/logos/programminghub.png" alt="ProgrammingHub" />
+          <img loading="lazy" src="/assets/images/logos/hostingraja.png" alt="Hosting Raja" />
+          <img loading="lazy" src="/assets/images/logos/inamigos.png" alt="InAmigosFoundation" />
+          <img loading="lazy" src="/assets/images/logos/googledeveloper.png" alt="Gooder Developer Launchpad" />
+        </div>
+      </div>
+    </body>
+  </astrodoc>
+  
